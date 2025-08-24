@@ -1,8 +1,8 @@
-# MindCare_ - Comprehensive Mental Health Platform
+# MindCare - Digital Healthcare Platform
 
 **Transforming Mental Health Support with Modern Technology**
 
-MindCare_ is a full-featured mental health management platform enabling individuals and professionals to connect, track well-being, and access support resources. Designed with security, accessibility, and scalability in mind, MindCare_ offers validated surveys, SOS alerts, community features, and rich analytics—all in one place.
+MindCare is a full-featured mental health management platform enabling individuals and professionals to connect, track well-being, and access support resources. Designed with security, accessibility, and scalability in mind, MindCare offers validated surveys, SOS alerts, community features, and rich analytics—all in one place.
 
 ---
 
@@ -17,7 +17,7 @@ MindCare_ is a full-featured mental health management platform enabling individu
 ## 📦 Project Structure
 
 ```
-MindCare_/
+Mindcare/
 ├── backend/          # Spring Boot Backend
 │   ├── src/
 │   ├── pom.xml
@@ -109,7 +109,7 @@ MindCare_/
 ### Backend Setup
 
 ```bash
-cd MindCare_/backend
+cd Mindcare/backend
 ```
 - Configure database in `src/main/resources/application.properties`
 - Run the application:
@@ -120,7 +120,7 @@ cd MindCare_/backend
 ### Frontend Setup
 
 ```bash
-cd MindCare_/frontend
+cd Mindcare/frontend
 ```
 - Install dependencies:
   ```bash
@@ -228,4 +228,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-> *MindCare_: Because your mental well-being matters.*
+> *Mindcare: Because your mental well-being matters.*
