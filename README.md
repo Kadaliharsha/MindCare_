@@ -1,50 +1,149 @@
-# MindCare_
+# MindCare_ - Comprehensive Mental Health Platform
 
-**Transforming Mental Health Support with Technology**
+**Transforming Mental Health Support with Modern Technology**
 
-MindCare_ is a comprehensive mental health management platform designed to empower individuals and professionals with digital tools for well-being, crisis support, and progress tracking. Built to drive positive change, MindCare_ combines personalized care, community engagement, and actionable insights—all in one secure application.
-
----
-
-## 🚀 Key Features
-
-### For Users
-- **User Registration & Login:** Secure account creation, email confirmation, password reset.
-- **Profile Management:** Personalize with name, age, photo, location, and emergency contacts.
-- **Mental Health Survey:** Take validated surveys, get instant feedback, track your well-being.
-- **Emergency Contact Management:** Add, edit, and manage contacts for rapid crisis notification.
-- **Appointment Scheduling:** Book, cancel, and reschedule sessions with verified therapists.
-- **Group Community:** Join topic-based groups, share stories, get peer support, and interact safely.
-- **Progress Tracking:** Visualize your mental health journey with charts, monthly reports, and PDF export.
-- **Emergency SOS:** Instantly alert contacts with your location and a customizable message.
-
-### For Admins
-- **Therapist Management:** Control therapist profiles, set availability, and manage bookings.
-- **Crisis Hotline Management:** Maintain up-to-date, location-based emergency hotlines.
-- **Resource Content Management:** Upload, categorize, and update mental health articles.
-- **Reporting & Analytics:** Access real-time user engagement stats and app performance trends.
-- **Group Community Moderation:** Oversee groups, appoint moderators, and handle flagged content.
+MindCare_ is a full-featured mental health management platform enabling individuals and professionals to connect, track well-being, and access support resources. Designed with security, accessibility, and scalability in mind, MindCare_ offers validated surveys, SOS alerts, community features, and rich analytics—all in one place.
 
 ---
 
-## 🧑‍💻 Tech Stack
+## 🚀 Quick Overview
 
-*Include your technologies here (e.g., React, Node.js, Firebase, Python, etc.)*
+- **Spring Boot Backend** & **React Frontend**
+- Modern, responsive UI built with Tailwind CSS
+- Secure authentication, therapist & appointment management, emergency support, and much more
 
 ---
 
-## 🎯 User Stories & Acceptance Criteria
+## 📦 Project Structure
 
-MindCare_ was designed around real-world user needs.  
+```
+MindCare_/
+├── backend/          # Spring Boot Backend
+│   ├── src/
+│   ├── pom.xml
+│   └── ...
+└── frontend/         # React Frontend
+    ├── src/
+    ├── package.json
+    └── ...
+```
+
+---
+
+## 📋 Features
+
+### Backend
+
+- User authentication and authorization (JWT)
+- Therapist profile & availability management
+- Appointment scheduling and reminders
+- Blog/content/resource management
+- Emergency contact system
+- SOS functionality (Twilio SMS integration)
+- Feedback and progress tracking
+- Crisis hotline management
+- Analytics & admin dashboards
+
+### Frontend
+
+- Modern, responsive UI with Tailwind CSS
+- User dashboard: surveys, appointments, progress charts
+- Therapist dashboard: manage sessions, profiles, and client lists
+- Blog creation and viewing, categorized resources
+- Community groups: join, post, comment, report
+- Emergency support (SOS button, contact management)
+- Assessment tools with instant feedback
+
+---
+
+## 🧑‍💻 Technology Stack
+
+### Backend
+
+- Spring Boot 3.x
+- Spring Security
+- Spring Data JPA
+- MySQL Database
+- Twilio (for SMS notifications)
+- Maven
+
+### Frontend
+
+- React 18
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- npm or yarn
+
+---
+
+## 🏗 Architecture
+
+- **Frontend:** React (Vite) SPA, communicates with backend via REST APIs
+- **Backend:** Spring Boot REST API, MySQL database
+- **Authentication:** JWT-based
+- **Notifications:** Twilio SMS, email via SendGrid or SMTP
+- **Deployment:** Docker-ready, CI/CD via GitHub Actions
+
+**Access Points:**
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:8080/api/v1/`
+- Backend Health: `http://localhost:8080/actuator/health`
+
+---
+
+## ⚡ Setup Instructions
+
+### Prerequisites
+
+#### Backend
+- Java 17+
+- Maven 3.6+
+- MySQL database
+
+#### Frontend
+- Node.js 16+
+- npm or yarn
+
+### Backend Setup
+
+```bash
+cd MindCare_/backend
+```
+- Configure database in `src/main/resources/application.properties`
+- Run the application:
+  ```bash
+  mvn spring-boot:run
+  ```
+
+### Frontend Setup
+
+```bash
+cd MindCare_/frontend
+```
+- Install dependencies:
+  ```bash
+  npm install
+  ```
+- Start the development server:
+  ```bash
+  npm run dev
+  ```
+
+---
+
+## 📚 User & Admin
+
 <details>
-<summary>See full user and admin stories</summary>
+<summary>Expand for full details</summary>
 
 ### Users
 1. **Registration & Login:** Email/password signup, confirmation, password reset.
 2. **Profile:** Name, age, photo, location, emergency contacts.
 3. **Survey:** Assess mental health, get instant, personalized recommendations.
 4. **Emergency Contacts:** Add/edit/delete contacts, confirmation messages.
-5. **Appointments:** View/book/cancel/reschedule, reminders via email.
+5. **Appointments:** View/book/cancel/reschedule, reminders via email/SMS.
 6. **Community:** Join, post, comment, get notifications, report violations.
 7. **Progress Tracking:** Charts, monthly trends, PDF export.
 8. **SOS:** Send location-based alerts to contacts.
@@ -60,53 +159,72 @@ MindCare_ was designed around real-world user needs.
 
 ---
 
-## 🏁 Getting Started
+## 🗄 Database & API
 
-1. **Clone the repo:**  
-   ```bash
-   git clone https://github.com/Kadaliharsha/MindCare_.git
-   ```
-2. **Install dependencies:**  
-   ```bash
-   # Example for Node.js projects
-   npm install
-   ```
-3. **Configure environment variables:**  
-   *(Add instructions if needed)*
+- All API endpoints prefixed with `/api/v1/`
+- Backend health check: `/actuator/health`
+- See [`docs/api.md`](docs/api.md) for endpoint details
 
-4. **Run locally:**  
-   ```bash
-   npm start
-   ```
-   *(Or the relevant command for your tech stack)*
+<details>
+<summary>Sample Database Entities</summary>
 
----
-
-## 🌐 Demo & Screenshots
-
-*Add links to live demo, screenshots, or video walkthroughs here to showcase the platform.*
+- **User:** id, name, email, password, age, profile picture, location, emergency contacts
+- **Therapist:** id, name, specialty, availability, profile, appointments
+- **Appointment:** id, user_id, therapist_id, scheduled_time, status
+- **Survey:** id, user_id, answers, result, timestamp
+- **EmergencyContact:** id, user_id, name, phone
+- **Group:** id, name, description, members, posts
+- **Post:** id, group_id, user_id, content, timestamp
+- **Resource/Blog:** id, title, content, category, author
+</details>
 
 ---
 
-## 👤 About the Author
+## 🛠 Development Notes
 
-*I'm Harsha Kadali, passionate about leveraging technology for social impact. Connect with me:*
-- [LinkedIn](your-linkedin-url)
-- [Email](your-email-address)
-- [Portfolio](your-portfolio-url)
+- Project reorganized from nested structure for maintainability
+- Functionality remains the same; organization improved
 
 ---
 
 ## 🤝 Contributing
 
-Interested in improving mental health tech? Contributions and feedback are welcome!  
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions, bug reports, and feature requests are welcome!
+
+- Fork the repository
+- Create your feature branch (`git checkout -b feature/AmazingFeature`)
+- Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the branch (`git push origin feature/AmazingFeature`)
+- Open a Pull Request
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📜 License
+## ❓ FAQ & Troubleshooting
 
-*Specify your license here (MIT, Apache, etc.)*
+- **How do I reset my password?**  
+  Use the "Forgot Password" link on the login page.
+
+- **How do I get help?**  
+  Contact the team or open an issue.
+
+- **What platforms are supported?**  
+  Web app, responsive design for mobile.
+
+---
+
+## 📬 Contact
+
+*Kadali Harshavardhan*  
+- [LinkedIn](https://linkedin.com/in/Kadaliharsha)
+- [Email](mailto:kadali.hrv@email.com)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
