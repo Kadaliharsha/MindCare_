@@ -1,4 +1,4 @@
-# MindCare - Mental Health Platform
+# MindCare - Digital Mental Healthcare Platform
 
 A comprehensive mental health platform with a Spring Boot backend and React frontend.
 
