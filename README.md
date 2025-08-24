@@ -1,117 +1,113 @@
-# MindCare - Digital Mental Healthcare Platform
+# MindCare_
 
-A comprehensive mental health platform with a Spring Boot backend and React frontend.
+**Transforming Mental Health Support with Technology**
 
-## Project Structure
+MindCare_ is a comprehensive mental health management platform designed to empower individuals and professionals with digital tools for well-being, crisis support, and progress tracking. Built to drive positive change, MindCare_ combines personalized care, community engagement, and actionable insights—all in one secure application.
 
-```
-MindCare/
-├── backend/          # Spring Boot Backend
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-└── frontend/         # React Frontend
-    ├── src/
-    ├── package.json
-    └── ...
-```
+---
 
-## Prerequisites
+## 🚀 Key Features
 
-### Backend Requirements
-- Java 17 or higher
-- Maven 3.6+
-- MySQL Database
+### For Users
+- **User Registration & Login:** Secure account creation, email confirmation, password reset.
+- **Profile Management:** Personalize with name, age, photo, location, and emergency contacts.
+- **Mental Health Survey:** Take validated surveys, get instant feedback, track your well-being.
+- **Emergency Contact Management:** Add, edit, and manage contacts for rapid crisis notification.
+- **Appointment Scheduling:** Book, cancel, and reschedule sessions with verified therapists.
+- **Group Community:** Join topic-based groups, share stories, get peer support, and interact safely.
+- **Progress Tracking:** Visualize your mental health journey with charts, monthly reports, and PDF export.
+- **Emergency SOS:** Instantly alert contacts with your location and a customizable message.
 
-### Frontend Requirements
-- Node.js 16 or higher
-- npm or yarn
+### For Admins
+- **Therapist Management:** Control therapist profiles, set availability, and manage bookings.
+- **Crisis Hotline Management:** Maintain up-to-date, location-based emergency hotlines.
+- **Resource Content Management:** Upload, categorize, and update mental health articles.
+- **Reporting & Analytics:** Access real-time user engagement stats and app performance trends.
+- **Group Community Moderation:** Oversee groups, appoint moderators, and handle flagged content.
 
-## Setup Instructions
+---
 
-### Backend Setup
+## 🧑‍💻 Tech Stack
 
-1. Navigate to the backend directory:
+*Include your technologies here (e.g., React, Node.js, Firebase, Python, etc.)*
+
+---
+
+## 🎯 User Stories & Acceptance Criteria
+
+MindCare_ was designed around real-world user needs.  
+<details>
+<summary>See full user and admin stories</summary>
+
+### Users
+1. **Registration & Login:** Email/password signup, confirmation, password reset.
+2. **Profile:** Name, age, photo, location, emergency contacts.
+3. **Survey:** Assess mental health, get instant, personalized recommendations.
+4. **Emergency Contacts:** Add/edit/delete contacts, confirmation messages.
+5. **Appointments:** View/book/cancel/reschedule, reminders via email.
+6. **Community:** Join, post, comment, get notifications, report violations.
+7. **Progress Tracking:** Charts, monthly trends, PDF export.
+8. **SOS:** Send location-based alerts to contacts.
+
+### Admins
+9. **Therapist Management:** Add/update/remove, set availability, booking notifications.
+10. **Hotline Management:** Add/update, location-based dashboards, inactivity alerts.
+11. **Resource Content:** Upload/edit/remove articles, categorize for easy access.
+12. **Analytics:** User engagement, trends, exportable data.
+13. **Community Oversight:** Create/edit groups, appoint moderators, handle reports.
+
+</details>
+
+---
+
+## 🏁 Getting Started
+
+1. **Clone the repo:**  
    ```bash
-   cd MindCare/backend
+   git clone https://github.com/Kadaliharsha/MindCare_.git
    ```
-
-2. Configure database in `src/main/resources/application.properties`
-
-3. Run the application:
+2. **Install dependencies:**  
    ```bash
-   mvn spring-boot:run
-   ```
-
-4. Backend will be available at: `http://localhost:8080`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd MindCare/frontend
-   ```
-
-2. Install dependencies:
-   ```bash
+   # Example for Node.js projects
    npm install
    ```
+3. **Configure environment variables:**  
+   *(Add instructions if needed)*
 
-3. Start the development server:
+4. **Run locally:**  
    ```bash
-   npm run dev
+   npm start
    ```
+   *(Or the relevant command for your tech stack)*
 
-4. Frontend will be available at: `http://localhost:5173`
+---
 
-## Features
+## 🌐 Demo & Screenshots
 
-### Backend Features
-- User authentication and authorization
-- Therapist management
-- Appointment scheduling
-- Blog management
-- Emergency contact system
-- SOS functionality
-- Feedback system
+*Add links to live demo, screenshots, or video walkthroughs here to showcase the platform.*
 
-### Frontend Features
-- Modern, responsive UI with Tailwind CSS
-- User dashboard
-- Therapist dashboard
-- Appointment booking
-- Blog creation and viewing
-- Emergency support
-- Assessment tools
+---
 
-## Technology Stack
+## 👤 About the Author
 
-### Backend
-- Spring Boot 3.x
-- Spring Security
-- Spring Data JPA
-- MySQL Database
-- Twilio (for SMS)
+*I'm Harsha Kadali, passionate about leveraging technology for social impact. Connect with me:*
+- [LinkedIn](your-linkedin-url)
+- [Email](your-email-address)
+- [Portfolio](your-portfolio-url)
 
-### Frontend
-- React 18
-- Vite
-- Tailwind CSS
-- React Router
-- Axios
+---
 
-## Development
+## 🤝 Contributing
 
-The project has been reorganized from the original nested structure to a cleaner, more maintainable layout. All functionality remains the same with improved project organization.
+Interested in improving mental health tech? Contributions and feedback are welcome!  
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## Access Points
+---
 
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:8080
-- **Backend Health Check**: http://localhost:8080/actuator/health
+## 📜 License
 
-## Notes
+*Specify your license here (MIT, Apache, etc.)*
 
-- Make sure both backend and frontend are running simultaneously for full functionality
-- Database must be properly configured before starting the backend
-- All API endpoints are prefixed with `/api/v1/` 
+---
+
+> *MindCare_: Because your mental well-being matters.*
